@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>クリプト・パーティー</title>
+<title>Crypto Purrty</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20220%20220%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22f%22%20x1%3D%220%22%20y1%3D%221%22%20x2%3D%221%22%20y2%3D%220%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%239945FF%22/%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%235E8BFF%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2314F195%22/%3E%3C/linearGradient%3E%3ClinearGradient%20id%3D%22fv%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2314F195%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%239945FF%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath%20d%3D%22M44%2072%20L60%2026%20L92%2058%20H128%20L160%2026%20L176%2072%20Q190%20100%20182%20136%20Q170%20186%20110%20188%20Q50%20186%2038%20136%20Q30%20100%2044%2072Z%22%20fill%3D%22url%28%23f%29%22/%3E%0A%3Ccircle%20cx%3D%2284%22%20cy%3D%22112%22%20r%3D%2217%22%20fill%3D%22%230B0B14%22/%3E%3Ccircle%20cx%3D%2284%22%20cy%3D%22112%22%20r%3D%228%22%20fill%3D%22%2314F195%22/%3E%3Ccircle%20cx%3D%22136%22%20cy%3D%22112%22%20r%3D%2217%22%20fill%3D%22%230B0B14%22/%3E%3Ccircle%20cx%3D%22136%22%20cy%3D%22112%22%20r%3D%228%22%20fill%3D%22%2314F195%22/%3E%0A%3Cpath%20d%3D%22M104%20136%20h12%20l-6%207z%22%20fill%3D%22%230B0B14%22/%3E%3Cpath%20d%3D%22M96%20150%20q14%2010%2028%200%22%20stroke%3D%22%230B0B14%22%20stroke-width%3D%225%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22/%3E%0A%3Cg%20stroke%3D%22%23fff%22%20stroke-width%3D%223.5%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.85%22%3E%3Cpath%20d%3D%22M60%20140%20h-28%20M62%20150%20l-26%208%22/%3E%3Cpath%20d%3D%22M160%20140%20h28%20M158%20150%20l26%208%22/%3E%3C/g%3E%0A%3Cg%20transform%3D%22translate%28148%2030%29%20rotate%2822%29%20scale%28.95%29%22%3E%3Cpath%20d%3D%22M0%200%20L16%20-40%20L32%200%20Z%22%20fill%3D%22url%28%23fv%29%22/%3E%3Crect%20x%3D%222%22%20y%3D%22-14%22%20width%3D%2228%22%20height%3D%225%22%20fill%3D%22%230B0B14%22%20opacity%3D%22.55%22%20transform%3D%22skewY%28-8%29%22/%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%22-42%22%20r%3D%226%22%20fill%3D%22%2314F195%22/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Space+Grotesk:wght@500;700&display=swap">
@@ -524,6 +525,14 @@ header .ib:disabled{opacity:.35}
 .rh3 .small{grid-column:1/-1}
 .nftrow{display:flex;gap:14px;align-items:flex-start}
 .nftsvg{width:96px;height:96px;flex:none;border-radius:16px;box-shadow:0 6px 18px rgba(153,69,255,.3)}
+
+/* v14: Crypto Purrty cat */
+.hero::before,.hero::after{display:none}
+.hero{padding-bottom:24px;padding-right:22px}
+.herocat{position:absolute;right:0;top:6px;width:112px;height:112px;z-index:0;filter:drop-shadow(0 8px 18px rgba(153,69,255,.45));transform:rotate(8deg)}
+.hero .tag{max-width:calc(100% - 96px)}
+.logo{display:flex;align-items:center;gap:6px}
+.logocat{width:26px;height:26px;flex:none}
 </style>
 </head>
 <body>
@@ -531,7 +540,11 @@ header .ib:disabled{opacity:.35}
   <div class="hd">
     <button class="ib" id="backBtn" aria-label="戻る">‹</button>
     <button class="ib" id="fwdBtn" aria-label="進む">›</button>
-    <p class="logo"><b class="brA">クリプト・</b><span class="brB">パーティー</span></p>
+    <p class="logo"><svg class="logocat" viewBox="0 0 220 220" aria-hidden="true"><defs><linearGradient id="lcg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#9945FF"/><stop offset=".55" stop-color="#5E8BFF"/><stop offset="1" stop-color="#14F195"/></linearGradient><linearGradient id="lcgv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14F195"/><stop offset="1" stop-color="#9945FF"/></linearGradient></defs><path d="M44 72 L60 26 L92 58 H128 L160 26 L176 72 Q190 100 182 136 Q170 186 110 188 Q50 186 38 136 Q30 100 44 72Z" fill="url(#lcg)"/>
+<circle cx="84" cy="112" r="17" fill="#0B0B14"/><circle cx="84" cy="112" r="8" fill="#14F195"/><circle cx="136" cy="112" r="17" fill="#0B0B14"/><circle cx="136" cy="112" r="8" fill="#14F195"/>
+<path d="M104 136 h12 l-6 7z" fill="#0B0B14"/><path d="M96 150 q14 10 28 0" stroke="#0B0B14" stroke-width="5" fill="none" stroke-linecap="round"/>
+<g stroke="#fff" stroke-width="3.5" stroke-linecap="round" opacity=".85"><path d="M60 140 h-28 M62 150 l-26 8"/><path d="M160 140 h28 M158 150 l26 8"/></g>
+<g transform="translate(148 30) rotate(22) scale(.95)"><path d="M0 0 L16 -40 L32 0 Z" fill="url(#lcgv)"/><rect x="2" y="-14" width="28" height="5" fill="#0B0B14" opacity=".55" transform="skewY(-8)"/><circle cx="16" cy="-42" r="6" fill="#14F195"/></g></svg><b class="brA">クリプト・</b><span class="brB">パーティー</span></p>
     <button class="bal num" id="balChip" hidden></button>
     <button class="ib" id="menuBtn" aria-label="メニュー">☰</button>
   </div>
@@ -540,6 +553,11 @@ header .ib:disabled{opacity:.35}
 <main>
   <section class="screen" id="scrHome">
     <div class="hero">
+      <svg class="herocat" viewBox="0 0 220 220" aria-hidden="true"><defs><linearGradient id="hcg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#9945FF"/><stop offset=".55" stop-color="#5E8BFF"/><stop offset="1" stop-color="#14F195"/></linearGradient><linearGradient id="hcgv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14F195"/><stop offset="1" stop-color="#9945FF"/></linearGradient></defs><path d="M44 72 L60 26 L92 58 H128 L160 26 L176 72 Q190 100 182 136 Q170 186 110 188 Q50 186 38 136 Q30 100 44 72Z" fill="url(#hcg)"/>
+<circle cx="84" cy="112" r="17" fill="#0B0B14"/><circle cx="84" cy="112" r="8" fill="#14F195"/><circle cx="136" cy="112" r="17" fill="#0B0B14"/><circle cx="136" cy="112" r="8" fill="#14F195"/>
+<path d="M104 136 h12 l-6 7z" fill="#0B0B14"/><path d="M96 150 q14 10 28 0" stroke="#0B0B14" stroke-width="5" fill="none" stroke-linecap="round"/>
+<g stroke="#fff" stroke-width="3.5" stroke-linecap="round" opacity=".85"><path d="M60 140 h-28 M62 150 l-26 8"/><path d="M160 140 h28 M158 150 l26 8"/></g>
+<g transform="translate(148 30) rotate(22) scale(.95)"><path d="M0 0 L16 -40 L32 0 Z" fill="url(#hcgv)"/><rect x="2" y="-14" width="28" height="5" fill="#0B0B14" opacity=".55" transform="skewY(-8)"/><circle cx="16" cy="-42" r="6" fill="#14F195"/></g></svg>
       <div class="tag" data-t="home_tag"></div>
       <h1 class="brand1"><b class="brA">クリプト・</b><span class="brB">パーティー</span></h1>
       <p class="muted" data-t="home_sub"></p>
@@ -3266,11 +3284,11 @@ const S9 = {
 for (const l in S9) Object.assign(D[l], S9[l]);
 
 const S11 = {
- ja:{ brand_a:"クリプト・", brand_b:"パーティー", resume_h:"ゲームが進行中です", resume_sub:"{game}はまだ続いています。今戻れば、そのまま参加を続けられます。", resume_btn:"ゲームに戻る", resume_pill:"▶ {game}に戻る", done_toast:"{game}が終わりました：{result}" },
- en:{ brand_a:"Crypto ", brand_b:"Party", resume_h:"A game is in progress", resume_sub:"{game} is still going. Jump back in to keep playing.", resume_btn:"Back to the game", resume_pill:"▶ Back to {game}", done_toast:"{game} is over: {result}" },
- zh:{ brand_a:"加密", brand_b:"派对", resume_h:"游戏正在进行中", resume_sub:"{game}还在继续。现在回去就能接着参加。", resume_btn:"回到游戏", resume_pill:"▶ 回到{game}", done_toast:"{game}已结束：{result}" },
- es:{ brand_a:"Cripto ", brand_b:"Fiesta", resume_h:"Hay un juego en curso", resume_sub:"{game} sigue en marcha. Vuelve ahora para seguir jugando.", resume_btn:"Volver al juego", resume_pill:"▶ Volver a {game}", done_toast:"{game} terminó: {result}" },
- ko:{ brand_a:"크립토 ", brand_b:"파티", resume_h:"게임이 진행 중이에요", resume_sub:"{game}이(가) 아직 계속되고 있어요. 지금 돌아가면 이어서 참가할 수 있어요.", resume_btn:"게임으로 돌아가기", resume_pill:"▶ {game}(으)로 돌아가기", done_toast:"{game} 끝: {result}" }
+ ja:{ brand_a:"Crypto ", brand_b:"Purrty", resume_h:"ゲームが進行中です", resume_sub:"{game}はまだ続いています。今戻れば、そのまま参加を続けられます。", resume_btn:"ゲームに戻る", resume_pill:"▶ {game}に戻る", done_toast:"{game}が終わりました：{result}" },
+ en:{ brand_a:"Crypto ", brand_b:"Purrty", resume_h:"A game is in progress", resume_sub:"{game} is still going. Jump back in to keep playing.", resume_btn:"Back to the game", resume_pill:"▶ Back to {game}", done_toast:"{game} is over: {result}" },
+ zh:{ brand_a:"Crypto ", brand_b:"Purrty", resume_h:"游戏正在进行中", resume_sub:"{game}还在继续。现在回去就能接着参加。", resume_btn:"回到游戏", resume_pill:"▶ 回到{game}", done_toast:"{game}已结束：{result}" },
+ es:{ brand_a:"Crypto ", brand_b:"Purrty", resume_h:"Hay un juego en curso", resume_sub:"{game} sigue en marcha. Vuelve ahora para seguir jugando.", resume_btn:"Volver al juego", resume_pill:"▶ Volver a {game}", done_toast:"{game} terminó: {result}" },
+ ko:{ brand_a:"Crypto ", brand_b:"Purrty", resume_h:"게임이 진행 중이에요", resume_sub:"{game}이(가) 아직 계속되고 있어요. 지금 돌아가면 이어서 참가할 수 있어요.", resume_btn:"게임으로 돌아가기", resume_pill:"▶ {game}(으)로 돌아가기", done_toast:"{game} 끝: {result}" }
 };
 for (const l in S11) Object.assign(D[l], S11[l]);
 
@@ -3288,31 +3306,31 @@ const S13 = {
   room_code_l:"合言葉", room_share:"友達にこの合言葉かQRを見せてね", room_members:"メンバー {n}/4", room_host:"ホスト", room_you:"あなた", room_empty:"待っています…", room_joined:"{name}が参加しました",
   room_pick:"ゲームを選んでスタート", room_need:"4人そろうとスタートできます", room_wait_host:"ホストがゲームを選ぶのを待っています…", room_host_picked:"ホストが「{game}」を選びました", room_leave:"部屋を出る",
   room_hist:"ルーム履歴", room_hist_none:"まだルームで遊んでいません", room_games:"{n}ゲーム", room_mvp:"MVP", room_taps:"あなた {n}タップ", room_back:"ルームに戻る", room_badge:"ルーム {code}", room_hosted:"ホスト",
-  nft_step:"参加記念 [[nft|NFT]] バッジを受け取る", nft_h:"参加記念NFT", nft_name:"Crypto Party 参加記念バッジ", nft_sub:"クリプト・パーティーに参加した証です。[[cnft|圧縮NFT]]としてあなたのウォレットに入っています。", nft_phantom:"Phantomに移すと「収集品」タブでも見られます", nft_none:"参加登録が終わると届きます" },
+  nft_step:"参加記念 [[nft|NFT]] バッジを受け取る", nft_h:"参加記念NFT", nft_name:"Crypto Purrty 参加記念バッジ", nft_sub:"クリプト・パーティーに参加した証です。[[cnft|圧縮NFT]]としてあなたのウォレットに入っています。", nft_phantom:"Phantomに移すと「収集品」タブでも見られます", nft_none:"参加登録が終わると届きます" },
  en:{ mode_cpu:"CPU practice", mode_cpu_d:"Play right away against the CPU", mode_room:"Room", mode_room_d:"Play with friends using a code", m_room:"Room",
   room_title:"Room", room_sub:"Make a room with a code and play the same game with your friends.", room_create:"Create a room", room_create_d:"You'll get a code and a QR to show your friends", room_join_h:"Join with a code", room_code_ph:"4-letter code", room_join:"Join", room_err:"Enter the 4-letter code",
   room_code_l:"Room code", room_share:"Show this code or QR to your friends", room_members:"Members {n}/4", room_host:"Host", room_you:"You", room_empty:"Waiting…", room_joined:"{name} joined",
   room_pick:"Pick a game to start", room_need:"You can start when 4 players are in", room_wait_host:"Waiting for the host to pick a game…", room_host_picked:"The host picked \"{game}\"", room_leave:"Leave room",
   room_hist:"Room history", room_hist_none:"You haven't played in a room yet", room_games:"{n} games", room_mvp:"MVP", room_taps:"You: {n} taps", room_back:"Back to the room", room_badge:"Room {code}", room_hosted:"Host",
-  nft_step:"Receiving your participation [[nft|NFT]] badge", nft_h:"Participation NFT", nft_name:"Crypto Party participation badge", nft_sub:"Proof that you joined Crypto Party. It sits in your wallet as a [[cnft|compressed NFT]].", nft_phantom:"Move your wallet to Phantom to see it under Collectibles", nft_none:"Arrives when registration finishes" },
+  nft_step:"Receiving your participation [[nft|NFT]] badge", nft_h:"Participation NFT", nft_name:"Crypto Purrty participation badge", nft_sub:"Proof that you joined Crypto Party. It sits in your wallet as a [[cnft|compressed NFT]].", nft_phantom:"Move your wallet to Phantom to see it under Collectibles", nft_none:"Arrives when registration finishes" },
  zh:{ mode_cpu:"CPU练习", mode_cpu_d:"和CPU对战，马上开玩", mode_room:"房间", mode_room_d:"用口令和朋友一起玩", m_room:"房间",
   room_title:"房间", room_sub:"用口令开一个房间，和朋友玩同一局游戏。", room_create:"创建房间", room_create_d:"会显示口令和二维码，给朋友看就行", room_join_h:"用口令加入", room_code_ph:"4位口令", room_join:"加入", room_err:"请输入4位口令",
   room_code_l:"口令", room_share:"把口令或二维码给朋友看", room_members:"成员 {n}/4", room_host:"房主", room_you:"你", room_empty:"等待中…", room_joined:"{name} 加入了",
   room_pick:"选择游戏并开始", room_need:"凑齐4人就能开始", room_wait_host:"等待房主选择游戏…", room_host_picked:"房主选择了“{game}”", room_leave:"离开房间",
   room_hist:"房间记录", room_hist_none:"还没有在房间里玩过", room_games:"{n}局", room_mvp:"MVP", room_taps:"你点了{n}次", room_back:"回到房间", room_badge:"房间 {code}", room_hosted:"房主",
-  nft_step:"领取参加纪念[[nft|NFT]]徽章", nft_h:"参加纪念NFT", nft_name:"Crypto Party 参加纪念徽章", nft_sub:"这是你参加Crypto Party的证明，以[[cnft|压缩NFT]]的形式放在你的钱包里。", nft_phantom:"转到Phantom后，也能在“收藏品”里看到", nft_none:"完成参加登记后就会收到" },
+  nft_step:"领取参加纪念[[nft|NFT]]徽章", nft_h:"参加纪念NFT", nft_name:"Crypto Purrty 参加纪念徽章", nft_sub:"这是你参加Crypto Party的证明，以[[cnft|压缩NFT]]的形式放在你的钱包里。", nft_phantom:"转到Phantom后，也能在“收藏品”里看到", nft_none:"完成参加登记后就会收到" },
  es:{ mode_cpu:"Práctica vs CPU", mode_cpu_d:"Juega ya contra la CPU", mode_room:"Sala", mode_room_d:"Juega con amigos usando un código", m_room:"Sala",
   room_title:"Sala", room_sub:"Crea una sala con un código y jueguen el mismo juego con tus amigos.", room_create:"Crear una sala", room_create_d:"Recibirás un código y un QR para mostrar a tus amigos", room_join_h:"Unirse con un código", room_code_ph:"Código de 4 letras", room_join:"Unirse", room_err:"Escribe el código de 4 letras",
   room_code_l:"Código", room_share:"Muestra este código o QR a tus amigos", room_members:"Miembros {n}/4", room_host:"Anfitrión", room_you:"Tú", room_empty:"Esperando…", room_joined:"{name} se unió",
   room_pick:"Elige un juego para empezar", room_need:"Pueden empezar cuando haya 4 jugadores", room_wait_host:"Esperando a que el anfitrión elija un juego…", room_host_picked:"El anfitrión eligió \"{game}\"", room_leave:"Salir de la sala",
   room_hist:"Historial de salas", room_hist_none:"Aún no has jugado en una sala", room_games:"{n} juegos", room_mvp:"MVP", room_taps:"Tú: {n} toques", room_back:"Volver a la sala", room_badge:"Sala {code}", room_hosted:"Anfitrión",
-  nft_step:"Recibiendo tu insignia [[nft|NFT]] de participación", nft_h:"NFT de participación", nft_name:"Insignia de participación de Crypto Party", nft_sub:"Prueba de que participaste en Crypto Party. Está en tu billetera como [[cnft|NFT comprimido]].", nft_phantom:"Pasa tu billetera a Phantom para verla en Coleccionables", nft_none:"Llega cuando termina el registro" },
+  nft_step:"Recibiendo tu insignia [[nft|NFT]] de participación", nft_h:"NFT de participación", nft_name:"Insignia de participación de Crypto Purrty", nft_sub:"Prueba de que participaste en Crypto Party. Está en tu billetera como [[cnft|NFT comprimido]].", nft_phantom:"Pasa tu billetera a Phantom para verla en Coleccionables", nft_none:"Llega cuando termina el registro" },
  ko:{ mode_cpu:"CPU 연습", mode_cpu_d:"CPU와 바로 대전", mode_room:"룸", mode_room_d:"코드로 친구와 함께", m_room:"룸",
   room_title:"룸", room_sub:"코드로 방을 만들고 친구들과 같은 게임을 해요.", room_create:"방 만들기", room_create_d:"코드와 QR이 나오니 친구에게 보여 주세요", room_join_h:"코드로 참가", room_code_ph:"4글자 코드", room_join:"참가하기", room_err:"4글자 코드를 입력해 주세요",
   room_code_l:"코드", room_share:"이 코드나 QR을 친구에게 보여 주세요", room_members:"멤버 {n}/4", room_host:"호스트", room_you:"나", room_empty:"기다리는 중…", room_joined:"{name}님이 참가했어요",
   room_pick:"게임을 골라 시작", room_need:"4명이 모이면 시작할 수 있어요", room_wait_host:"호스트가 게임을 고르는 중…", room_host_picked:"호스트가 '{game}'을(를) 골랐어요", room_leave:"방 나가기",
   room_hist:"룸 기록", room_hist_none:"아직 룸에서 놀지 않았어요", room_games:"{n}게임", room_mvp:"MVP", room_taps:"나 {n}탭", room_back:"룸으로 돌아가기", room_badge:"룸 {code}", room_hosted:"호스트",
-  nft_step:"참가 기념 [[nft|NFT]] 배지 받기", nft_h:"참가 기념 NFT", nft_name:"Crypto Party 참가 기념 배지", nft_sub:"Crypto Party에 참가한 증거예요. [[cnft|압축 NFT]]로 내 지갑에 들어 있어요.", nft_phantom:"Phantom으로 옮기면 '수집품' 탭에서도 볼 수 있어요", nft_none:"참가 등록이 끝나면 도착해요" }
+  nft_step:"참가 기념 [[nft|NFT]] 배지 받기", nft_h:"참가 기념 NFT", nft_name:"Crypto Purrty 참가 기념 배지", nft_sub:"Crypto Party에 참가한 증거예요. [[cnft|압축 NFT]]로 내 지갑에 들어 있어요.", nft_phantom:"Phantom으로 옮기면 '수집품' 탭에서도 볼 수 있어요", nft_none:"참가 등록이 끝나면 도착해요" }
 };
 for (const l in S13) Object.assign(D[l], S13[l]);
 
@@ -3507,7 +3525,11 @@ function renderRoom() {
 }
 document.querySelectorAll("[data-mode]").forEach(b => b.onclick = () => { if (b.dataset.mode === "room") go("scrRoom"); else { playMode = "cpu"; } });
 function nftSvg(no) {
-  return `<svg viewBox="0 0 120 120" class="nftsvg"><defs><linearGradient id="ng" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#9945FF"/><stop offset="1" stop-color="#14F195"/></linearGradient></defs><rect width="120" height="120" rx="18" fill="#0B0B14"/><g fill="url(#ng)"><path d="M34 30h52l-8 9H26z"/><path d="M26 45h52l8 9H34z"/><path d="M34 60h52l-8 9H26z"/></g><text x="60" y="88" text-anchor="middle" fill="#fff" font-size="10" font-weight="800" font-family="sans-serif">CRYPTO PARTY</text><text x="60" y="103" text-anchor="middle" fill="#14F195" font-size="8.5" font-weight="700" font-family="sans-serif">PARTICIPANT #${no}</text></svg>`;
+  return `<svg viewBox="0 0 120 120" class="nftsvg"><rect width="120" height="120" rx="18" fill="#0B0B14"/><g transform="translate(25 6) scale(.32)"><defs><linearGradient id="ncg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#9945FF"/><stop offset=".55" stop-color="#5E8BFF"/><stop offset="1" stop-color="#14F195"/></linearGradient><linearGradient id="ncgv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14F195"/><stop offset="1" stop-color="#9945FF"/></linearGradient></defs><path d="M44 72 L60 26 L92 58 H128 L160 26 L176 72 Q190 100 182 136 Q170 186 110 188 Q50 186 38 136 Q30 100 44 72Z" fill="url(#ncg)"/>
+<circle cx="84" cy="112" r="17" fill="#0B0B14"/><circle cx="84" cy="112" r="8" fill="#14F195"/><circle cx="136" cy="112" r="17" fill="#0B0B14"/><circle cx="136" cy="112" r="8" fill="#14F195"/>
+<path d="M104 136 h12 l-6 7z" fill="#0B0B14"/><path d="M96 150 q14 10 28 0" stroke="#0B0B14" stroke-width="5" fill="none" stroke-linecap="round"/>
+<g stroke="#fff" stroke-width="3.5" stroke-linecap="round" opacity=".85"><path d="M60 140 h-28 M62 150 l-26 8"/><path d="M160 140 h28 M158 150 l26 8"/></g>
+<g transform="translate(148 30) rotate(22) scale(.95)"><path d="M0 0 L16 -40 L32 0 Z" fill="url(#ncgv)"/><rect x="2" y="-14" width="28" height="5" fill="#0B0B14" opacity=".55" transform="skewY(-8)"/><circle cx="16" cy="-42" r="6" fill="#14F195"/></g></g><text x="60" y="92" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="900" font-family="sans-serif">CRYPTO <tspan fill="#14F195">PURRTY</tspan></text><text x="60" y="106" text-anchor="middle" fill="#9AA0B8" font-size="7.5" font-weight="700" font-family="sans-serif" letter-spacing="1">PARTICIPANT #${no}</text></svg>`;
 }
 function renderNft() {
   const el = $("nftCard"); if (!el) return;
