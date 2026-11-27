@@ -592,9 +592,9 @@ header .ib:disabled{opacity:.35}
     <p class="muted" data-t="select_sub"></p>
     <div class="modes" id="modeTabs"><button type="button" data-mode="cpu" class="on"><b data-t="mode_cpu"></b><span data-t="mode_cpu_d"></span></button><button type="button" data-mode="room"><b data-t="mode_room"></b><span data-t="mode_room_d"></span></button></div>
     <div class="games">
-      <button class="game-card" data-game="last"><span class="ic">⏱️</span><span><b data-t="g_last"></b><span data-t="g_last_d"></span><br><span class="entry" data-t="entry"></span></span><span class="go">›</span></button>
       <button class="game-card" data-game="tug"><span class="ic">🪢</span><span><b data-t="g_tug"></b><span data-t="g_tug_d"></span><br><span class="entry" data-t="entry"></span></span><span class="go">›</span></button>
       <button class="game-card" data-game="daruma"><span class="ic">🎎</span><span><b data-t="g_daruma"></b><span data-t="g_daruma_d"></span><br><span class="entry" data-t="entry"></span></span><span class="go">›</span></button>
+      <button class="game-card" data-game="last"><span class="ic">⏱️</span><span><b data-t="g_last"></b><span data-t="g_last_d"></span><br><span class="entry" data-t="entry"></span></span><span class="go">›</span></button>
     </div>
     <button class="linkcard" id="selGloss">📖<span data-t="sel_gloss"></span>›</button>
   </section>
@@ -3510,7 +3510,7 @@ function renderRoom() {
       : `<div class="rmem empty"><span class="av"></span><span class="small">${tp("room_empty")}</span></div>`; }).join("");
     body.innerHTML = `<div class="card roomlobby"><div class="rtop"><div><p class="small">${tp("room_code_l")}</p><p class="rcode mono">${room.code}</p><p class="small">${tp("room_share")}</p></div><div class="rqr">${qrSvg(url)}</div></div></div>
       <div class="card"><h3>${tp("room_members", { n: room.members.length })}</h3><div class="rmems">${slots}</div></div>
-      ${room.host ? `<div class="card"><h3>${tp("room_pick")}</h3>${full ? "" : `<p class="small" style="margin-bottom:8px">${tp("room_need")}</p>`}<div class="rgames">${["last", "tug", "daruma"].map(g => `<button type="button" class="btn btn-sub" data-rg="${g}" ${full ? "" : "disabled"}>${{ last: "⏱️", tug: "🪢", daruma: "🎎" }[g]} ${tp("g_" + g)}</button>`).join("")}</div></div>`
+      ${room.host ? `<div class="card"><h3>${tp("room_pick")}</h3>${full ? "" : `<p class="small" style="margin-bottom:8px">${tp("room_need")}</p>`}<div class="rgames">${["tug", "daruma", "last"].map(g => `<button type="button" class="btn btn-sub" data-rg="${g}" ${full ? "" : "disabled"}>${{ last: "⏱️", tug: "🪢", daruma: "🎎" }[g]} ${tp("g_" + g)}</button>`).join("")}</div></div>`
         : `<div class="card center"><p class="muted">${full ? "⏳ " : ""}${tp("room_wait_host")}</p></div>`}
       <button class="btn btn-sub btn-small" type="button" id="rLeave" style="width:100%">${tp("room_leave")}</button>`;
     body.querySelectorAll("[data-rg]").forEach(b => b.onclick = () => { playMode = "room"; gameId = b.dataset.rg; fillRules(); go("scrRules"); });
